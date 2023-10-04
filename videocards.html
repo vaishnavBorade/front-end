@@ -7,12 +7,14 @@
     <style>
         /* CSS for the card container */
         .card {
-            width: 300px;
+            width: 400px;
             border: 1px solid #ccc;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 20px;
+            margin: auto;
+            /* margin: 20px; */
             overflow: hidden;
+            justify-content: flex-start;
         }
 
         /* CSS for the GIF */
@@ -32,9 +34,20 @@
             font-weight: bold;
             margin-bottom: 10px;
         }
+        .row{
+            display: flex;
+            padding-left: 180px;
+            padding-right: 180px;
+        }
+        :hover.card{
+            background-color: rgb(163, 163, 251);
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
+<section id="cards">
+<div class="row">
     <div class="card">
         <img src="sgnlag.gif" alt="GIF">
         <div class="card-content">
@@ -49,6 +62,9 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna auctor, viverra dolor sed, iaculis purus.</p>
         </div>
     </div>
+</div>
+<br><br><br>
+<div class="row">
     <div class="card">
         <img src="sgnlag.gif" alt="GIF">
         <div class="card-content">
@@ -63,5 +79,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna auctor, viverra dolor sed, iaculis purus.</p>
         </div>
     </div>
+</div>
+</section>
 </body>
 </html>
