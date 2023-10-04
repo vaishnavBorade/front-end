@@ -12,10 +12,10 @@
             border: 1px solid #ccc;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: auto;
-            /* margin: 20px; */
+            margin: 20px;
             overflow: hidden;
             justify-content: flex-start;
+            transition: all 0.3s ease-in-out;
         }
 
         /* CSS for the GIF */
@@ -27,6 +27,7 @@
         /* CSS for the card content */
         .card-content {
             padding: 20px;
+            display: none;
         }
 
         /* CSS for the heading */
@@ -38,16 +39,18 @@
 
         .row {
             display: flex;
-            padding-left: 180px;
-            padding-right: 180px;
+            flex-wrap: wrap;
         }
 
-        :hover.card {
+        .card:hover {
             background-color: rgb(163, 163, 251);
             cursor: pointer;
+            height: auto;
         }
-        
-        
+
+        .card:hover .card-content {
+            display: block;
+        }
     </style>
 </head>
 
@@ -60,7 +63,7 @@
                     <h2 class="card-heading">English</h2>
                     <p>Our platform specializes in English language education for deaf students, offering a range of
                         accessible resources. These include sign language-interpreted video lessons, interactive
-                        flashcards, engaging storytelling, and quizzes.  Our goal is to empower deaf
+                        flashcards, engaging storytelling, and quizzes. Our goal is to empower deaf
                         individuals to master English and connect with the broader world.</p>
                 </div>
             </div>
@@ -102,7 +105,24 @@
                 </div>
             </div>
         </div>
-    </section>
+        <br><br><br>
+        <section id="cards">
+            <div class="row">
+                <div class="card">
+                    <img src="sgnlag4.gif" alt="GIF">
+                    <div class="card-content">
+                        <h2 class="card-heading">Learn from our mentors</h2>
+                        <p>At Knowability, our dedicated mentors have taken the initiative to share their knowledge
+                            and expertise through a vast library of recorded videos. These videos cover a wide range of
+                            educational topics and are designed to empower learners of all abilities. Our mentors'
+                            contributions create a rich and diverse learning experience, allowing you to explore and
+                            access valuable educational content at your own pace. Whether you're a student, teacher, or
+                            lifelong learner, you'll find a treasure trove of insights and teachings from our passionate
+                            mentors, making learning both engaging and accessible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 </body>
 
 </html>
