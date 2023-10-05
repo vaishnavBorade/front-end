@@ -42,19 +42,15 @@ document.addEventListener('keydown', function (event) {
                 convertTextToSpeech(registerText);
             }, 1000); // Adjust the delay (in milliseconds) as needed
         }
-    } else if (event.key.toLowerCase() === 'g') {
-        // Redirect to the "games.html" page
-        window.location.href = "games.html";
+    } else if (event.key.toLowerCase() === 'e') {
+        // Select the "Get started" link for educational videos by its class
+        const getStartedLink = document.querySelector('.read_more[href="videocards.html"]');
+
+        // Trigger a click event on the "Get started" link for educational videos
+        if (getStartedLink) {
+            getStartedLink.click();
+        }
     }
-    else if (event.key.toLowerCase() === 'e') {
-        // Redirect to the "games.html" page
-        window.location.href = "videocards.html";
-    }
-    else if (event.key.toLowerCase() === 'q') {
-        // Redirect to the "games.html" page
-        window.location.href = "quiz.html";
-    }
-    
 });
 
 // Function to convert text to speech with custom rate
@@ -74,16 +70,4 @@ window.addEventListener('load', () => {
 
     // Adjust the rate as needed (0.8 for slower speech in this example)
     convertTextToSpeech(text, 0.8);
-});
-window.addEventListener('load', () => {
-    // Select a specific element with the "ttr" class (e.g., a div or p element)
-    const textElement = document.querySelector('.ttr');
-
-    if (textElement) {
-        // Retrieve the inner text of the selected element
-        const text = textElement.innerText;
-
-        // Adjust the rate as needed (0.8 for slower speech in this example)
-        convertTextToSpeech(text, 0.8);
-    }
 });
