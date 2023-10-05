@@ -67,7 +67,7 @@
 
   <!-- <main id="main"> -->
 
-    <h1 style="padding-left: 20px;margin-top: 30px;text-shadow: 1px 1px 2px black;">English Video Lectures</h1>
+    <h1 style="padding-left: 20px;margin-top: 30px;text-shadow: 1px 1px 2px black;">Video Lectures by our Teachers</h1>
 
     <!-- ======= Service Details Section ======= -->
     <section class="service-details">
@@ -80,7 +80,10 @@
               <div class="card-img">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/_L2P9jMeY6c" frameborder="0" allowfullscreen></iframe><br>
                 <div class="text_under_videos">
-                  Lesson 1
+                    Lesson 1 
+                    <button style="outline: none;border: 0;background-color: transparent;" onclick="changeFill('first')">
+                        <i class="bi bi-hand-thumbs-up" id="first"></i>
+                    </button>
                 </div>
               </div>
             </div>
@@ -91,6 +94,9 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/cNF4qpavT_M" frameborder="0" allowfullscreen></iframe><br>
                 <div class="text_under_videos">
                   Lesson 2
+                  <button style="outline: none;border: 0;background-color: transparent;" onclick="changeFill('second')">
+                        <i class="bi bi-hand-thumbs-up" id="second"></i>
+                    </button>
                 </div>
               </div>
             </div>
@@ -101,6 +107,9 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/aSuRMgeRq8I" frameborder="0" allowfullscreen></iframe><br>
                 <div class="text_under_videos">
                   Lesson 3
+                  <button style="outline: none;border: 0;background-color: transparent;" onclick="changeFill('third')">
+                        <i class="bi bi-hand-thumbs-up" id="third"></i>
+                    </button>
                 </div>
               </div>
             </div>
@@ -112,6 +121,9 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ENAZ0xtezoc" frameborder="0" allowfullscreen></iframe><br>
                 <div class="text_under_videos">
                   Lesson 4
+                  <button style="outline: none;border: 0;background-color: transparent;" onclick="changeFill('fourth')">
+                        <i class="bi bi-hand-thumbs-up" id="fourth"></i>
+                    </button>
                 </div>
               </div>
             </div>
@@ -122,6 +134,9 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/-Byd_fnv22Q" frameborder="0" allowfullscreen></iframe><br>
                 <div class="text_under_videos">
                   Lesson 5
+                  <button style="outline: none;border: 0;background-color: transparent;" onclick="changeFill('fifth')">
+                        <i class="bi bi-hand-thumbs-up" id="fifth"></i>
+                    </button>
                 </div>
               </div>
             </div>
@@ -171,6 +186,21 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    var flag = 0;
+    function changeFill(id){
+      var element = document.getElementById(id);
+      if (flag == 0) {
+        element.classList.remove("bi-hand-thumbs-up");
+        element.classList.add("bi-hand-thumbs-up-fill");
+        flag = 1;
+      } else{
+          element.classList.remove("bi-hand-thumbs-up-fill");
+          element.classList.add("bi-hand-thumbs-up");
+          flag = 0;
+      }
+    }
+  </script>
 
 </body>
 
